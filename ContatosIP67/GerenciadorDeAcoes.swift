@@ -40,15 +40,42 @@ class GerenciadorDeAcoes: NSObject {
         }
     
     private func ligar(){
+        let device = UIDevice.current
         
+        if device.model == "iPhone"{
+            print("UUID \(device.identifierForVendor!)")
+            abrirAplicativo(com: "tel:" + self.contato.telefone!)
+        }else{
+            let alert = UIAlertController(title: "Imposivel fazer Ligacoes", message: "Seu dispositivo nao e um Iphone", preferredStyle: .alert)
+            
+            self.controller.present(alert, animated: true, completion: nil)
+            
+            let acao = UIAlertAction(title:
+                "OK", style: .default, handler:
+                nil)
+            
+            alert.addAction(acao)
+        }
     }
     
     private func abrirNavegador(){
+            var url = contato.site!
         
+        if !url.hasPrefix("http://"){
+            url = "http://" + url
+        }
+        abrirAplicativo(com: url)
     }
     
     private func abrirMapa(){
-        
+        let url = ("http://maps.google.com/maps?q=" + self.contato.endereco!).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        abrirAplicativo(com: url)
+    }
+    
+    private func abrirAplicativo(com url:String){
+        UIApplication
+            .shared
+            .open(URL(string: url)!, options: [:], completionHandler: nil)
     }
     
     }
