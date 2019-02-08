@@ -10,6 +10,8 @@ import UIKit
 
 class FormularioContatoViewController: UIViewController {
 
+    var delegate:FormularioContatoViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,12 +58,17 @@ class FormularioContatoViewController: UIViewController {
     @IBAction func criarContato(){
         self.pegarDadosDoFormulario()
         dao.adiciona(contato)
+        self.delegate?.contatoAdicionado(contato)
         _=self.navigationController?.popViewController(animated: true)
-        print(contato)
+        
+        
+        
+        //print(contato)
     }
     
     func atualizaContato(){
         pegarDadosDoFormulario()
+        self.delegate?.contatoAtualizado(contato)
         _ = self.navigationController?.popViewController(animated: true)
     }
   

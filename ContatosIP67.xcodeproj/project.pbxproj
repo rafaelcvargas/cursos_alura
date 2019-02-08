@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD157444220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD157443220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift */; };
+		FD157467220CF9CD001BABBB /* GerenciadorDeAcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD157466220CF9CD001BABBB /* GerenciadorDeAcoes.swift */; };
 		FDA500DD220A32C3001418EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA500DC220A32C3001418EF /* AppDelegate.swift */; };
 		FDA500DF220A32C3001418EF /* FormularioContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA500DE220A32C3001418EF /* FormularioContatoViewController.swift */; };
 		FDA500E2220A32C3001418EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA500E0220A32C3001418EF /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD157443220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
+		FD157466220CF9CD001BABBB /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerenciadorDeAcoes.swift; sourceTree = "<group>"; };
 		FDA500D9220A32C3001418EF /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA500DC220A32C3001418EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDA500DE220A32C3001418EF /* FormularioContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 				FDA500E8220A32C3001418EF /* LaunchScreen.storyboard */,
 				FDA500EB220A32C3001418EF /* Info.plist */,
 				FDA500E3220A32C3001418EF /* ContatosIP67.xcdatamodeld */,
+				FD157443220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift */,
+				FD157466220CF9CD001BABBB /* GerenciadorDeAcoes.swift */,
 			);
 			path = ContatosIP67;
 			sourceTree = "<group>";
@@ -155,6 +161,8 @@
 			files = (
 				FDA500F6220A4B9F001418EF /* Contato.m in Sources */,
 				FDA500DF220A32C3001418EF /* FormularioContatoViewController.swift in Sources */,
+				FD157467220CF9CD001BABBB /* GerenciadorDeAcoes.swift in Sources */,
+				FD157444220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift in Sources */,
 				FDA500F8220A55EC001418EF /* ContatoDao.swift in Sources */,
 				FDA500FC220A61D6001418EF /* ListaContatosViewController.swift in Sources */,
 				FDA500E5220A32C3001418EF /* ContatosIP67.xcdatamodeld in Sources */,
@@ -323,6 +331,7 @@
 				FDA500F0220A32C3001418EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

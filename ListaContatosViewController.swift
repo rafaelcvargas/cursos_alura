@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ListaContatosViewController: UITableViewController {
+class ListaContatosViewController: UITableViewController,FormularioContatoViewControllerDelegate {
 
     static let cellIdentifier:String = "Cell"
     var dao:ContatoDao
+    var linhaDestaque: IndexPath?
     
     required init?(coder aDecoder:NSCoder){
         self.dao = ContatoDao.sharedInstance()
@@ -20,6 +21,8 @@ class ListaContatosViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(exibirMaisAcoes(gesture:)))
+        self.tableView.addGestureRecognizer(longPress)
         self.navigationItem.leftBarButtonItem = self.editButtonItem
 
         // Uncomment the following line to preserve selection between presentations
@@ -101,18 +104,29 @@ class ListaContatosViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "FormSegue"{
+            if let formulario = segue.destination as? FormularioContatoViewController{
+            formulario.delegate = self
+            }
+        }
     }
-    */
+    
     
     override func viewDidAppear(_ animated: Bool) {
         self.tableView.reloadData()
+        if let linha = self.linhaDestaque{
+            self.tableView.selectRow(at: linha, animated: true, scrollPosition: .middle)
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)){
+                self.tableView.deselectRow(at: linha, animated: true)
+                self.linhaDestaque = Optional.none
+            }
+            
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -126,8 +140,31 @@ class ListaContatosViewController: UITableViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main",bundle:nil)
         let formulario = storyboard.instantiateViewController(withIdentifier: "Form-Contato") as! FormularioContatoViewController
         
+        formulario.delegate = self
         formulario.contato = contato
         self.navigationController?.pushViewController(formulario, animated: true)
+    }
+
+    func contatoAtualizado(_ contato: Contato) {
+        self.linhaDestaque = IndexPath(row: dao.buscaPosicaoDoContato(contato), section: 0)
+        //print("contato atualizado: \(contato.nome)");
+    }
+    
+    func contatoAdicionado(_ contato: Contato) {
+        self.linhaDestaque = IndexPath(row: dao.buscaPosicaoDoContato(contato), section: 0)
+        //print("contato adicionado: \(contato.nome)");
+    }
+    
+    func exibirMaisAcoes(gesture: UIGestureRecognizer){
+        if gesture.state == .began{
+            let ponto = gesture.location(in: self.tableView)
+            if let indexPath = self.tableView.indexPathForRow(at: ponto){
+                let contato = self.dao.buscarContatoNaPosicao(indexPath.row)
+                let acoes = GerenciadorDeAcoes(do: contato)
+                
+                acoes.exibirAcoes(em: self)
+            }
+        }
     }
 
 }

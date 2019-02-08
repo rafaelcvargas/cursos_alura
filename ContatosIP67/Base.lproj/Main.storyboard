@@ -32,7 +32,7 @@
                     <navigationItem key="navigationItem" title="Contatos" id="Olf-m1-1OO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="LO2-Xl-JQe">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="YwX-0K-CRS"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="FormSegue" id="YwX-0K-CRS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -134,7 +134,7 @@
         <scene sceneID="xvl-SJ-bSA">
             <objects>
                 <navigationController id="U0t-UB-Be5" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vcl-rP-zK8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vcl-rP-zK8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
