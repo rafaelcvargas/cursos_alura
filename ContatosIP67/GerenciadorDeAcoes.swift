@@ -48,13 +48,14 @@ class GerenciadorDeAcoes: NSObject {
         }else{
             let alert = UIAlertController(title: "Imposivel fazer Ligacoes", message: "Seu dispositivo nao e um Iphone", preferredStyle: .alert)
             
-            self.controller.present(alert, animated: true, completion: nil)
-            
             let acao = UIAlertAction(title:
                 "OK", style: .default, handler:
                 nil)
             
             alert.addAction(acao)
+            
+            self.controller.present(alert, animated: true, completion: nil)
+            
         }
     }
     
