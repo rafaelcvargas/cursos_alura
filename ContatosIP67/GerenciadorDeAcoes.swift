@@ -42,7 +42,7 @@ class GerenciadorDeAcoes: NSObject {
     private func ligar(){
         let device = UIDevice.current
         
-        if device.model == "iPhone"{
+        if device.model == "IPhone"{
             print("UUID \(device.identifierForVendor!)")
             abrirAplicativo(com: "tel:" + self.contato.telefone!)
         }else{
