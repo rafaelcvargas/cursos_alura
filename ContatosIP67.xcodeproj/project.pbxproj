@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FD157444220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD157443220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift */; };
 		FD157467220CF9CD001BABBB /* GerenciadorDeAcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD157466220CF9CD001BABBB /* GerenciadorDeAcoes.swift */; };
+		FD3B3916220E4A1400BA893B /* ContatosNoMapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B3915220E4A1400BA893B /* ContatosNoMapaViewController.swift */; };
 		FDA500DD220A32C3001418EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA500DC220A32C3001418EF /* AppDelegate.swift */; };
 		FDA500DF220A32C3001418EF /* FormularioContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA500DE220A32C3001418EF /* FormularioContatoViewController.swift */; };
 		FDA500E2220A32C3001418EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA500E0220A32C3001418EF /* Main.storyboard */; };
@@ -23,6 +24,8 @@
 /* Begin PBXFileReference section */
 		FD157443220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		FD157466220CF9CD001BABBB /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerenciadorDeAcoes.swift; sourceTree = "<group>"; };
+		FD3B3915220E4A1400BA893B /* ContatosNoMapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatosNoMapaViewController.swift; sourceTree = "<group>"; };
+		FD3B3917220E5A0400BA893B /* Vila Mariana.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Vila Mariana.gpx"; sourceTree = "<group>"; };
 		FDA500D9220A32C3001418EF /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA500DC220A32C3001418EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDA500DE220A32C3001418EF /* FormularioContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewController.swift; sourceTree = "<group>"; };
@@ -76,9 +79,11 @@
 				FDA500F5220A4B9F001418EF /* Contato.m */,
 				FDA500F4220A4B9F001418EF /* Contato.h */,
 				FDA500E0220A32C3001418EF /* Main.storyboard */,
+				FD3B3915220E4A1400BA893B /* ContatosNoMapaViewController.swift */,
 				FDA500E6220A32C3001418EF /* Assets.xcassets */,
 				FDA500E8220A32C3001418EF /* LaunchScreen.storyboard */,
 				FDA500EB220A32C3001418EF /* Info.plist */,
+				FD3B3917220E5A0400BA893B /* Vila Mariana.gpx */,
 				FDA500E3220A32C3001418EF /* ContatosIP67.xcdatamodeld */,
 				FD157443220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift */,
 				FD157466220CF9CD001BABBB /* GerenciadorDeAcoes.swift */,
@@ -161,6 +166,7 @@
 			files = (
 				FDA500F6220A4B9F001418EF /* Contato.m in Sources */,
 				FDA500DF220A32C3001418EF /* FormularioContatoViewController.swift in Sources */,
+				FD3B3916220E4A1400BA893B /* ContatosNoMapaViewController.swift in Sources */,
 				FD157467220CF9CD001BABBB /* GerenciadorDeAcoes.swift in Sources */,
 				FD157444220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift in Sources */,
 				FDA500F8220A55EC001418EF /* ContatoDao.swift in Sources */,
