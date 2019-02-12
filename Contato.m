@@ -12,7 +12,7 @@
 @implementation Contato
 
 -(NSString *)description{
-    return [NSString stringWithFormat:@"Nome: %@, Telefone: %@, Endereco: %@, Site: %@",self.nome, self.telefone, self.endereco, self.site];
+    return [NSString stringWithFormat:@"Nome: %@, Telefone: %@, Endereco: %@, Site: %@,Latitude: %@, Longitude: %@",self.nome, self.telefone, self.endereco, self.site, self.latitude, self.longitude];
 }
 
 -(CLLocationCoordinate2D)coordinate{

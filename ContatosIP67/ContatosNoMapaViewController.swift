@@ -70,6 +70,18 @@ class ContatosNoMapaViewController: UIViewController,MKMapViewDelegate {
         }
         return pino
     }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
+        //recupere o pino que foi selecionado
+        let pinoZoom = view.annotation
+        //opcionalmente, defina os limites do zoom
+        let span = MKCoordinateSpanMake(0.10, 0.10)
+        //ou utilize o zoom corrente e centralize o mapa
+        //let span = mapView.region.span
+        //agora mova o mapa
+        let region = MKCoordinateRegion(center: pinoZoom!.coordinate, span: span)
+        mapView.setRegion(region, animated: true)
+    }
 
     /*
     // MARK: - Navigation
