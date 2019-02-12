@@ -38,5 +38,7 @@
 	<string>Deseja liberar a permissao de acesso a Camera?</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string></string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string></string>
 </dict>
 </plist>

@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import CoreLocation
 
 class FormularioContatoViewController: UIViewController,UINavigationControllerDelegate,UIImagePickerControllerDelegate {
 
     var delegate:FormularioContatoViewControllerDelegate?
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nome:UITextField!
+    @IBOutlet weak var telefone:UITextField!
+    @IBOutlet weak var endereco:UITextField!
+    @IBOutlet weak var site:UITextField!
+    @IBOutlet weak var latitude:UITextField!
+    @IBOutlet weak var longitude:UITextField!
+    @IBOutlet weak var loading:UIActivityIndicatorView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +32,8 @@ class FormularioContatoViewController: UIViewController,UINavigationControllerDe
             self.telefone.text = contato.telefone
             self.endereco.text = contato.endereco
             self.site.text = contato.site
+            self.longitude.text = contato.longitude?.description
+            self.latitude.text = contato.latitude?.description
             
             if let foto = self.contato.foto{
                 self.imageView.image = self.contato.foto
@@ -51,21 +63,28 @@ class FormularioContatoViewController: UIViewController,UINavigationControllerDe
         super.init(coder: aDecoder)
     }
     
-    @IBOutlet weak var nome:UITextField!
-    @IBOutlet weak var telefone:UITextField!
-    @IBOutlet weak var endereco:UITextField!
-    @IBOutlet weak var site:UITextField!
+    
     
     func pegarDadosDoFormulario(){
         if contato == nil{
             self.contato = Contato()
         }
         
+        
         self.contato.foto = self.imageView.image
         self.contato.nome = self.nome.text!
         self.contato.telefone = self.telefone.text!
         self.contato.endereco = self.endereco.text!
         self.contato.site = self.site.text!
+        
+        if let latitude = Double(self.latitude.text!){
+            self.contato.latitude = latitude as NSNumber
+        }
+        
+        if let longitude = Double(self.longitude.text!){
+            self.contato.longitude = longitude as NSNumber
+        }
+        
     }
     
     @IBAction func criarContato(){
@@ -108,6 +127,38 @@ class FormularioContatoViewController: UIViewController,UINavigationControllerDe
         picker.dismiss(animated: true, completion: nil)
         
         }
+    
+    @IBAction func buscaCoordenadas(sender: UIButton){
+        
+        if endereco.text != ""{
+        
+            self.loading.startAnimating()
+            sender.isEnabled = false
+            let geocoder = CLGeocoder()
+        
+            geocoder.geocodeAddressString(self.endereco.text!){(resultado, error) in
+                if error == nil && (resultado?.count)! > 0 {
+                    let placemark = resultado![0]
+                    let coordenada = placemark.location!.coordinate
+                
+                    self.latitude.text = coordenada.latitude.description
+                    self.longitude.text = coordenada.longitude.description
+                }
+                self.loading.stopAnimating()
+                sender.isEnabled = true
+            }
+        }else{
+            let alert = UIAlertController(title: "Preencher o endereco primeiro", message: "Endereco em branco", preferredStyle: .alert)
+            
+            let acao = UIAlertAction(title:
+                "OK", style: .default, handler:
+                nil)
+            
+            alert.addAction(acao)
+            //continuar depois
+            //self.controller.present(alert, animated: true, completion: nil)
+        }
+    }
   
 }
 
