@@ -63,7 +63,7 @@ class ContatosNoMapaViewController: UIViewController,MKMapViewDelegate {
             let frame = CGRect(x: 0.0, y: 0.0, width: 32.0, height: 32.0)
             let imagemContato = UIImageView(frame: frame)
             
-            imagemContato.image = foto
+            imagemContato.image = contato.foto
             
             pino.leftCalloutAccessoryView = imagemContato
             
