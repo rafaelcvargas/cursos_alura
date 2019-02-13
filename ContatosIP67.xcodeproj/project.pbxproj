@@ -12,6 +12,7 @@
 		FD157467220CF9CD001BABBB /* GerenciadorDeAcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD157466220CF9CD001BABBB /* GerenciadorDeAcoes.swift */; };
 		FD34DAFE22138F9800DC8FC7 /* CoreDataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34DAFD22138F9800DC8FC7 /* CoreDataUtil.swift */; };
 		FD3B3916220E4A1400BA893B /* ContatosNoMapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B3915220E4A1400BA893B /* ContatosNoMapaViewController.swift */; };
+		FD513E522214DA0900E63CAA /* TemperaturaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD513E512214DA0900E63CAA /* TemperaturaViewController.swift */; };
 		FDA500DD220A32C3001418EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA500DC220A32C3001418EF /* AppDelegate.swift */; };
 		FDA500DF220A32C3001418EF /* FormularioContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA500DE220A32C3001418EF /* FormularioContatoViewController.swift */; };
 		FDA500E2220A32C3001418EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA500E0220A32C3001418EF /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		FD34DAFD22138F9800DC8FC7 /* CoreDataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataUtil.swift; sourceTree = "<group>"; };
 		FD3B3915220E4A1400BA893B /* ContatosNoMapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatosNoMapaViewController.swift; sourceTree = "<group>"; };
 		FD3B3917220E5A0400BA893B /* Vila Mariana.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Vila Mariana.gpx"; sourceTree = "<group>"; };
+		FD513E512214DA0900E63CAA /* TemperaturaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperaturaViewController.swift; sourceTree = "<group>"; };
 		FDA500D9220A32C3001418EF /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA500DC220A32C3001418EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDA500DE220A32C3001418EF /* FormularioContatoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				FD157443220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift */,
 				FD157466220CF9CD001BABBB /* GerenciadorDeAcoes.swift */,
 				FD34DAFD22138F9800DC8FC7 /* CoreDataUtil.swift */,
+				FD513E512214DA0900E63CAA /* TemperaturaViewController.swift */,
 			);
 			path = ContatosIP67;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				FDA500F8220A55EC001418EF /* ContatoDao.swift in Sources */,
 				FDA500FC220A61D6001418EF /* ListaContatosViewController.swift in Sources */,
 				FDA500E5220A32C3001418EF /* ContatosIP67.xcdatamodeld in Sources */,
+				FD513E522214DA0900E63CAA /* TemperaturaViewController.swift in Sources */,
 				FD34DAFE22138F9800DC8FC7 /* CoreDataUtil.swift in Sources */,
 				FDA500DD220A32C3001418EF /* AppDelegate.swift in Sources */,
 			);

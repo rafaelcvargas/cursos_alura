@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hxf-kl-DfS" id="wRg-sP-UL1">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -185,12 +185,70 @@
             </objects>
             <point key="canvasLocation" x="-428" y="138.98050974512745"/>
         </scene>
+        <!--Temperatura View Controller-->
+        <scene sceneID="PDs-U0-tOS">
+            <objects>
+                <viewController storyboardIdentifier="temperaturaViewController" id="CAc-cR-n96" customClass="TemperaturaViewController" customModule="ContatosIP67" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ITi-di-cWF"/>
+                        <viewControllerLayoutGuide type="bottom" id="JNN-6G-RJb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b5V-7R-jii">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Condicao Atual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4Q-JA-Vcg">
+                                <frame key="frameInset" minX="127" minY="43" width="121" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="valor condicao atual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNS-Nd-HhZ">
+                                <frame key="frameInset" minX="105" minY="92" width="164" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Min: valor temperatura minima" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIh-rY-JjF">
+                                <frame key="frameInset" minX="61" minY="312" width="253" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Max: valor temperatura maxima" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecK-Ww-B4h">
+                                <frame key="frameInset" minX="61" minY="352" width="253" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WxZ-RR-yHf">
+                                <frame key="frameInset" minX="122" minY="140" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="WxZ-RR-yHf" id="f4w-c4-LxW"/>
+                        <outlet property="labelCondicaoAtual" destination="y4Q-JA-Vcg" id="93I-2F-Egg"/>
+                        <outlet property="labelTemperaturaMaxima" destination="ecK-Ww-B4h" id="f1M-Er-RaN"/>
+                        <outlet property="labelTemperaturaMinima" destination="jIh-rY-JjF" id="QdW-OJ-JMU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAr-qk-FHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="341.60000000000002" y="139.880059970015"/>
+        </scene>
         <!--Contatos-->
         <scene sceneID="xvl-SJ-bSA">
             <objects>
                 <navigationController id="U0t-UB-Be5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Contatos" image="lista-contatos" id="bXe-Ae-Tgj"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vcl-rP-zK8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vcl-rP-zK8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -225,7 +283,7 @@
             <objects>
                 <navigationController id="Luw-CX-Waa" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mapa" image="mapa-contatos" id="bW6-gW-LTq"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yR7-aR-nCr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yR7-aR-nCr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
