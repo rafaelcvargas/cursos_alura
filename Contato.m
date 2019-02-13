@@ -11,6 +11,8 @@
 
 @implementation Contato
 
+@dynamic nome,telefone,endereco,site,latitude,longitude,foto;
+
 -(NSString *)description{
     return [NSString stringWithFormat:@"Nome: %@, Telefone: %@, Endereco: %@, Site: %@,Latitude: %@, Longitude: %@",self.nome, self.telefone, self.endereco, self.site, self.latitude, self.longitude];
 }

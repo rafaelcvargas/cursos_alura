@@ -10,6 +10,7 @@
 		FB1D3D16F668DBC7D066E1F2 /* Pods_ContatosIP67.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E965025CBF7B5D7D57B1641 /* Pods_ContatosIP67.framework */; };
 		FD157444220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD157443220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift */; };
 		FD157467220CF9CD001BABBB /* GerenciadorDeAcoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD157466220CF9CD001BABBB /* GerenciadorDeAcoes.swift */; };
+		FD34DAFE22138F9800DC8FC7 /* CoreDataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD34DAFD22138F9800DC8FC7 /* CoreDataUtil.swift */; };
 		FD3B3916220E4A1400BA893B /* ContatosNoMapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B3915220E4A1400BA893B /* ContatosNoMapaViewController.swift */; };
 		FDA500DD220A32C3001418EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA500DC220A32C3001418EF /* AppDelegate.swift */; };
 		FDA500DF220A32C3001418EF /* FormularioContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA500DE220A32C3001418EF /* FormularioContatoViewController.swift */; };
@@ -28,6 +29,7 @@
 		825DCA86A0C32D763A3ACE88 /* Pods-ContatosIP67.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContatosIP67.release.xcconfig"; path = "Target Support Files/Pods-ContatosIP67/Pods-ContatosIP67.release.xcconfig"; sourceTree = "<group>"; };
 		FD157443220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		FD157466220CF9CD001BABBB /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerenciadorDeAcoes.swift; sourceTree = "<group>"; };
+		FD34DAFD22138F9800DC8FC7 /* CoreDataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataUtil.swift; sourceTree = "<group>"; };
 		FD3B3915220E4A1400BA893B /* ContatosNoMapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatosNoMapaViewController.swift; sourceTree = "<group>"; };
 		FD3B3917220E5A0400BA893B /* Vila Mariana.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Vila Mariana.gpx"; sourceTree = "<group>"; };
 		FDA500D9220A32C3001418EF /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 				FDA500E3220A32C3001418EF /* ContatosIP67.xcdatamodeld */,
 				FD157443220CD87D001BABBB /* FormularioContatoViewControllerDelegate.swift */,
 				FD157466220CF9CD001BABBB /* GerenciadorDeAcoes.swift */,
+				FD34DAFD22138F9800DC8FC7 /* CoreDataUtil.swift */,
 			);
 			path = ContatosIP67;
 			sourceTree = "<group>";
@@ -112,7 +115,6 @@
 				279E8F75AA0A1A5B11056FBE /* Pods-ContatosIP67.debug.xcconfig */,
 				825DCA86A0C32D763A3ACE88 /* Pods-ContatosIP67.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -192,15 +194,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ContatosIP67-checkManifestLockResult.txt",
 			);
@@ -214,15 +212,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ContatosIP67/Pods-ContatosIP67-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
@@ -246,6 +240,7 @@
 				FDA500F8220A55EC001418EF /* ContatoDao.swift in Sources */,
 				FDA500FC220A61D6001418EF /* ListaContatosViewController.swift in Sources */,
 				FDA500E5220A32C3001418EF /* ContatosIP67.xcdatamodeld in Sources */,
+				FD34DAFE22138F9800DC8FC7 /* CoreDataUtil.swift in Sources */,
 				FDA500DD220A32C3001418EF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
