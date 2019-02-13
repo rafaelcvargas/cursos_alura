@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hxf-kl-DfS" id="wRg-sP-UL1">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -190,7 +190,7 @@
             <objects>
                 <navigationController id="U0t-UB-Be5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Contatos" image="lista-contatos" id="bXe-Ae-Tgj"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vcl-rP-zK8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="vcl-rP-zK8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -225,7 +225,7 @@
             <objects>
                 <navigationController id="Luw-CX-Waa" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mapa" image="mapa-contatos" id="bW6-gW-LTq"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yR7-aR-nCr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yR7-aR-nCr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

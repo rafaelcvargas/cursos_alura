@@ -30,7 +30,7 @@ class ContatoDao: CoreDataUtil {
         self.inserirDadosIniciais()
         
         self.carregaContatos()
-        //print("Caminho do BD: \(NSHomeDirectory())")
+        print("Caminho do BD: \(NSHomeDirectory())")
     }
     
     func listaTodos() -> [Contato]{
@@ -42,6 +42,7 @@ class ContatoDao: CoreDataUtil {
     }
     
     func remove(_ posicao:Int){
+        persistentContainer.viewContext.delete(contatos[posicao])
         contatos.remove(at: posicao)
     }
     
@@ -84,6 +85,10 @@ class ContatoDao: CoreDataUtil {
         }catch{
             print("Fetch Falhou: \(error.localizedDescription)")
         }
+    }
+    
+    func novoContato() -> Contato{
+        return NSEntityDescription.insertNewObject(forEntityName: "Contato", into: self.persistentContainer.viewContext) as! Contato
     }
 }
 
