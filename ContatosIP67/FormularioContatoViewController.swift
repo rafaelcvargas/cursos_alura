@@ -131,7 +131,7 @@ class FormularioContatoViewController: UIViewController,UINavigationControllerDe
         
     @IBAction func buscaCoordenadas(sender: UIButton){
         
-        if endereco.text != ""{
+        if self.endereco.text != ""{
         
             self.loading.startAnimating()
             sender.isEnabled = false
