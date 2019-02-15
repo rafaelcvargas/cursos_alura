@@ -32,6 +32,7 @@ class TemperaturaViewController: UIViewController {
         // Cria notificação para detectar mudança de orientação em tempo real
         NotificationCenter.default.addObserver(self, selector: #selector(TemperaturaViewController.orientationChanged), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
+        orientationChanged()
 
         // Do any additional setup after loading the view.
         
